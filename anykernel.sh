@@ -6,7 +6,8 @@
 properties() { '
 kernel.string=Aether
 device.support=fog, rain, wind
-kernel.compiler=clang r450784e
+kernel.compiler=r450784e
+kernel.made=dantepaulxd
 message.word=nothing owns you.
 do.devicecheck=1
 do.modules=0
@@ -30,7 +31,7 @@ set_perm_recursive 0 0 750 750 $RAMDISK/init* $RAMDISK/sbin;
 } # end attributes
 
 # boot shell variables
-block=boot;
+BLOCK=/dev/block/by-name/boot;
 is_slot_device=auto;
 RAMDISK_COMPRESSION=auto;
 PATCH_VBMETA_FLAG=auto;
