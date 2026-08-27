@@ -558,11 +558,11 @@ KERNEL_COMPILER="$(file_getprop anykernel.sh kernel.compiler)";
 KERNEL_MADE="$(file_getprop anykernel.sh kernel.made)";
 MESSAGE_WORD="$(file_getprop anykernel.sh message.word)";
 DEVICE_NAME="$(getprop ro.product.device)";
-ui_print "-- Kernel Name    : $KERNEL_STRING";
-ui_print "-- Clang Version  : $KERNEL_COMPILER";
+ui_print "-- Kernel         : $KERNEL_STRING";
+ui_print "-- Clang          : $KERNEL_COMPILER";
 ui_print "-- Device         : $DEVICE_NAME";
 ui_print "-- Maintainer     : $KERNEL_MADE";
-ui_print "_________________________________________________";
+ui_print "________________________________________";
 
 if [ -f version ]; then
   ui_print " ";
@@ -597,7 +597,7 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print "- Done";
-ui_print "_________________________________________________";
+ui_print "________________________________________";
 ui_print "$MESSAGE_WORD"
 export PATH="$OLD_PATH";
 unset OLD_PATH OUTFD ZIPFILE;
